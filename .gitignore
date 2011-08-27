@@ -1,1 +1,3 @@
 Dist-Zilla-Plugin-UnusedVarsTests-*
+.build
+Dist-Zilla-Plugin-Test-UnusedVars-*

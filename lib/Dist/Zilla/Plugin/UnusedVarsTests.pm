@@ -3,44 +3,30 @@ use strict;
 use warnings;
 
 package Dist::Zilla::Plugin::UnusedVarsTests;
-# ABSTRACT: Release tests for unused variables
+# ABSTRACT: (DEPRECATED) Release tests for unused variables
+# VERSION
 use Moose;
-extends 'Dist::Zilla::Plugin::InlineFiles';
+use namespace::autoclean;
+extends 'Dist::Zilla::Plugin::Test::UnusedVars';
+
+before register_component => sub {
+    warn '!!! [UnusedVarsTests] is deprecated and will be removed in a future release; replace it with [Test::UnusedVars]';
+};
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
 
-=begin :prelude
+=head1 SYNOPSIS
+
+Please use L<Dist::Zilla::Plugin::Test::UnusedVars> instead.
+
+In C<dist.ini>:
+
+    [Test::UnusedVars]
 
 =for test_synopsis
 1;
 __END__
 
-=end :prelude
-
-=head1 SYNOPSIS
-
-In C<dist.ini>:
-
-    [UnusedVarsTests]
-
-=head1 DESCRIPTION
-
-This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the
-following file:
-
-  xt/release/unused-vars.t - a standard Test::Vars test
-
 =cut
-
-__DATA__
-___[ xt/release/unused-vars.t ]___
-#!perl
-
-use Test::More;
-
-eval "use Test::Vars";
-plan skip_all => "Test::Vars required for testing unused vars"
-  if $@;
-all_vars_ok();
