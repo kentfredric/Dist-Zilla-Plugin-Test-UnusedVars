@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+
+v2.0.0    2011-09-07
     - Rename to Dist::Zilla::Plugin::Test::UnusedVars
 
 1.100860  2010-03-27 23:36:51 Europe/Vienna
