@@ -3,7 +3,7 @@ NAME
     variables
 
 VERSION
-    version v2.0.0
+    version 2.0.1
 
 SYNOPSIS
     In "dist.ini":
@@ -17,6 +17,9 @@ DESCRIPTION
       xt/release/unused-vars.t - a standard Test::Vars test
 
 AVAILABILITY
+    The project homepage is
+    <http://metacpan.org/release/Dist-Zilla-Plugin-Test-UnusedVars/>.
+
     The latest version of this module is available from the Comprehensive
     Perl Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a
     CPAN site near you, or see

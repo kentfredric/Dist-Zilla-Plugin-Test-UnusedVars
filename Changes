@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+
+2.0.1     2011-09-07
     - Packaging updates
 
 v2.0.0    2011-09-07
