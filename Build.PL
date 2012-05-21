@@ -27,12 +27,13 @@ my %module_build_args = (
     "Mike Doherty <doherty\@cpan.org>"
   ],
   "dist_name" => "Dist-Zilla-Plugin-Test-UnusedVars",
-  "dist_version" => "2.0.1",
+  "dist_version" => "v2.0.2",
   "license" => "perl",
   "module_name" => "Dist::Zilla::Plugin::Test::UnusedVars",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
+    "Dist::Zilla" => 4,
     "Dist::Zilla::Plugin::InlineFiles" => 0,
     "Moose" => 0,
     "Test::Vars" => 0,

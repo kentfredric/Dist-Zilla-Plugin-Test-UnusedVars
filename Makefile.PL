@@ -31,6 +31,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Dist::Zilla::Plugin::Test::UnusedVars",
   "PREREQ_PM" => {
+    "Dist::Zilla" => 4,
     "Dist::Zilla::Plugin::InlineFiles" => 0,
     "Moose" => 0,
     "Test::Vars" => 0,
@@ -38,7 +39,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "2.0.1",
+  "VERSION" => "v2.0.2",
   "test" => {
     "TESTS" => "t/*.t"
   }
