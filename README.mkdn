@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::Test::UnusedVars - Release tests for unused variables
 
 # VERSION
 
-version v2.0.2
+version 2.000003
 
 # SYNOPSIS
 
