@@ -1,6 +1,7 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+    - Test only for our own deprecation warnings
 
 2.000003  2012-06-08
     - Use a traditional decimal version [dolmen, GH #2]

@@ -18,7 +18,7 @@ stderr_like(
             },
         );
     },
-    qr/^!!!.*deprecate/,
+    qr/^!!!.*deprecate/m,
     'Got a deprecation warning'
 );
 
