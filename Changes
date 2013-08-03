@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+
+2.000005  2013-08-03
   - Don't shoot yourself in the foot when testing [kentnl, GH #4]
 
 2.000004  2013-04-09

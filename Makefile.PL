@@ -31,16 +31,14 @@ my %WriteMakefileArgs = (
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
-    "File::Find" => 0,
-    "File::Path" => 0,
-    "File::Temp" => 0,
+    "Capture::Tiny" => 0,
     "Moose::Autobox" => 0,
     "Test::DZil" => 0,
     "Test::More" => "0.96",
     "Test::Output" => 0,
     "autodie" => 0
   },
-  "VERSION" => "2.000004",
+  "VERSION" => "2.000005",
   "test" => {
     "TESTS" => "t/*.t"
   }
