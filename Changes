@@ -1,6 +1,7 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+  - Allow specifying a list of files to test manually
 
 2.000005  2013-08-03
   - Don't shoot yourself in the foot when testing [kentnl, GH #4]
