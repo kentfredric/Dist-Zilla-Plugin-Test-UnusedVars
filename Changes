@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+
+2.000006  2014-04-29
   - Allow specifying a list of files to test manually
 
 2.000005  2013-08-03

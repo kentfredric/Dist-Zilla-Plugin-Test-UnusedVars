@@ -3,18 +3,24 @@ NAME
     variables
 
 VERSION
-    version 2.000005
+    version 2.000006
 
 SYNOPSIS
     In "dist.ini":
 
         [Test::UnusedVars]
 
+    Or, give a list of files to test:
+
+        [Test::UnusedVars]
+        file = lib/My/Module.pm
+        file = bin/verify-this
+
 DESCRIPTION
     This is an extension of Dist::Zilla::Plugin::InlineFiles, providing the
     following file:
 
-      xt/release/unused-vars.t - a standard Test::Vars test
+        xt/release/unused-vars.t - a standard Test::Vars test
 
 AVAILABILITY
     The project homepage is
