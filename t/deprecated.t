@@ -4,7 +4,6 @@ use Test::More 0.96 tests => 2;
 use Test::Output;
 use autodie;
 use Test::DZil;
-use Moose::Autobox;
 
 my $tzil;
 
@@ -24,7 +23,7 @@ stderr_like(
 
 $tzil->build;
 
-my @xtests = map $_->name =~ m{^xt/} ? $_->name : (), $tzil->files->flatten;
+my @xtests = map $_->name =~ m{^xt/} ? $_->name : (), @{ $tzil->files };
 ok(
     (grep { $_ eq 'xt/release/unused-vars.t' } @xtests),
     'unused-vars.t exists'

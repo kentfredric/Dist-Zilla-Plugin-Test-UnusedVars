@@ -3,7 +3,6 @@ use warnings;
 use Test::More 0.96 tests => 1;
 use autodie;
 use Test::DZil;
-use Moose::Autobox;
 
 my $tzil = Builder->from_config(
     { dist_root => 'corpus/DZ1' },
@@ -17,7 +16,7 @@ my $tzil = Builder->from_config(
 );
 $tzil->build;
 
-my @xtests = map $_->name =~ m{^xt/} ? $_->name : (), $tzil->files->flatten;
+my @xtests = map $_->name =~ m{^xt/} ? $_->name : (), @{ $tzil->files };
 ok(
     (grep { $_ eq 'xt/release/unused-vars.t' } @xtests),
     'unused-vars.t exists'

@@ -1,6 +1,7 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+  - Remove requirement for Moose::Autobox in tests [kentnl, GH #6]
 
 2.000006  2014-04-29
   - Allow specifying a list of files to test manually

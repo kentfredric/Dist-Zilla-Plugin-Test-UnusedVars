@@ -3,7 +3,7 @@ use warnings;
 use Test::More 0.96 tests => 3;
 use autodie;
 use Test::DZil;
-use Moose::Autobox;
+use List::Util qw( first );
 use Path::Tiny;
 
 subtest 'file list' => sub {
@@ -21,7 +21,7 @@ subtest 'file list' => sub {
     });
     $tzil->build;
 
-    my ($test) = grep { $_->name eq 'xt/release/unused-vars.t' } $tzil->files->flatten;
+    my ($test) = first { $_->name eq 'xt/release/unused-vars.t' } @{ $tzil->files };
     like $test->content => qr{\Q$_} for @files_to_test;
 };
 
@@ -43,7 +43,7 @@ subtest 'naughty filenames' => sub {
     });
     $tzil->build;
 
-    my ($test) = grep { $_->name eq 'xt/release/unused-vars.t' } $tzil->files->flatten;
+    my ($test) = first { $_->name eq 'xt/release/unused-vars.t' } @{ $tzil->files };
 
     run3([$^X => '-c'], \$test->content, \my $stdout, \my $stderr);
     isnt index($stderr => q/syntax OK/), -1
@@ -62,6 +62,6 @@ subtest 'all files' => sub {
     });
     $tzil->build;
 
-    my ($test) = grep { $_->name eq 'xt/release/unused-vars.t' } $tzil->files->flatten;
+    my ($test) = first { $_->name eq 'xt/release/unused-vars.t' } @{ $tzil->files };
     like $test->content => qr{\Qall_vars_ok};
 };
